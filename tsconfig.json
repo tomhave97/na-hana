@@ -1,0 +1,9 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "paths": {
+    ".store": [
+      "./store"
+    ]
+  },
+  "extends": "./.nuxt/tsconfig.json"
+}
