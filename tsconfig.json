@@ -5,5 +5,10 @@
       "./store"
     ]
   },
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "@nuxt3-graphql/urql"
+    ]
+  }
 }

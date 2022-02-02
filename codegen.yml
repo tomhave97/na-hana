@@ -1,0 +1,10 @@
+schema: https://api-eu-central-1.graphcms.com/v2/ckz5vyrzv1s8101z5elzz12jz/master
+documents: graphql/**/*.graphql
+generates:
+  generated/schema.ts:
+    config:
+      documentMode: documentNode
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-urql

@@ -1,0 +1,18 @@
+query Tasks(
+    $orderBy: TaskOrderByInput
+    $first: Int
+    $skip: Int
+    $where: TaskWhereInput
+) {
+  tasks(orderBy: $orderBy, first: $first, skip: $skip, where: $where) {
+    id
+  }
+}
+
+query Task(
+    $where: TaskWhereUniqueInput!
+) {
+    task(where: $where) {
+        id
+    }
+}
