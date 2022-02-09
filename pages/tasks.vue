@@ -7,29 +7,22 @@
 </template>
 
 <script lang="ts">
-import TaskType from "~/types/task";
 import {useActiveTask} from "~/store/activeTask";
 import {useTask} from "~/store/tasks";
-import {computed} from "@vue/runtime-core";
+import {computed, defineComponent} from "@vue/runtime-core";
 
-export default {
+export default defineComponent({
   name: "tasks",
   setup() {
     const taskStore = useTask();
+    const activeTask = useActiveTask();
 
     const tasks = computed(() => taskStore.unDone);
 
-    const activeTask = useActiveTask();
-
-    // @TODO make as composable
-    const openTask = (task: TaskType) => {
-      activeTask.add(task)
-    }
-
     return {
       tasks,
-      openTask,
+      openTask: activeTask.set,
     };
   }
-}
+})
 </script>

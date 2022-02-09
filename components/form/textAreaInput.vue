@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { useField } from "vee-validate";
 import {defineComponent} from "@vue/runtime-core";
 import * as yup from 'yup'
@@ -47,6 +47,7 @@ export default defineComponent({
     return {
       formValue,
       errorMessage
+
     };
   }
 });

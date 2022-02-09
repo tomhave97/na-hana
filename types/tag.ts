@@ -1,8 +1,6 @@
-import ColorEnum from "~/types/color";
-
-type TagType = {
+type Tag = {
     label: string,
-    color: ColorEnum
+    color: string
 }
 
-export default TagType
+export default Tag

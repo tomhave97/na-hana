@@ -42,7 +42,6 @@ import {computed, defineComponent, PropType, watch} from "@vue/runtime-core";
 import TaskType from "~/types/task";
 import {useForm} from "vee-validate";
 import Skeleton from "~/components/skeleton.vue";
-import {ref} from "vue";
 import {useTask} from "~/store/tasks";
 
 export default defineComponent({
@@ -76,6 +75,8 @@ export default defineComponent({
     const changeValue = (key: string, value: any) => {
       taskStore.changeValue(propertyValues.value.id, key, value)
     }
+
+
 
     return {
       onSubmit,

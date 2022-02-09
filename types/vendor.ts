@@ -1,9 +1,7 @@
-import ColorEnum from '~/types/color';
-
-type VendorType = {
+type Vendor = {
     id: number,
     name: string,
-    color: ColorEnum
+    color: string
 }
 
-export default VendorType;
+export default Vendor;

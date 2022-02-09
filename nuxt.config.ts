@@ -28,6 +28,6 @@ export default defineNuxtConfig({
         "@pinia/nuxt"
     ],
     urql: {
-        url: "https://api-eu-central-1.graphcms.com/v2/ckz5vyrzv1s8101z5elzz12jz/master",
+        url: `https://api-eu-central-1.graphcms.com/v2/${process.env.GRAPH_CMS_API_KEY_PROD}/master`,
     },
 })

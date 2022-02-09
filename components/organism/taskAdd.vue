@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent, PropType} from "@vue/runtime-core";
+import {computed, defineComponent } from "@vue/runtime-core";
 import TaskType from "~/types/task";
 import {useForm} from "vee-validate";
 import Skeleton from "~/components/skeleton.vue";

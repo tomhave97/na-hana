@@ -1,20 +1,19 @@
 import {defineStore} from "pinia";
-import TaskType from "~/types/task"
-import ColorEnum from "~/types/color";
+import Task from "~/types/task"
 
 export const useActiveTask = defineStore('activeTask', {
     state: () => {
         return {
-            task: null as TaskType | null
+            task: null as Task | null
         }
     },
 
     getters: {
-        activeTask: (state) => state.task
+        activeTask: (state): Task | null => state.task
     },
 
     actions: {
-        add(task: TaskType) {
+        set(task: Task) {
             this.task = task;
         },
         remove() {

@@ -1,4 +1,4 @@
-schema: https://api-eu-central-1.graphcms.com/v2/ckz5vyrzv1s8101z5elzz12jz/master
+schema: https://api-eu-central-1.graphcms.com/v2/${GRAPH_CMS_API_KEY_PROD}/master
 documents: graphql/**/*.graphql
 generates:
   generated/schema.ts:

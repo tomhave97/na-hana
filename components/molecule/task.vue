@@ -32,9 +32,9 @@
 </template>
 
 <script lang="ts">
-import Skeleton from "../skeleton";
+import Skeleton from "../skeleton.vue";
 import {defineComponent, PropType} from "@vue/runtime-core";
-import TaskType from "~/types/task";
+import Task from "~/types/task";
 import {useTask} from "~/store/tasks";
 
 export default defineComponent({
@@ -42,11 +42,11 @@ export default defineComponent({
   components: { Skeleton },
   props: {
     task: {
-      type: Object as PropType<TaskType>,
+      type: Object as PropType<Task>,
       required: true,
     }
   },
-  setup(props) {
+  setup() {
     const taskStore = useTask();
 
     return {

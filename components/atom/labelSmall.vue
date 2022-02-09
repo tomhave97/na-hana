@@ -1,9 +1,11 @@
 <template>
-  <label :for="name" class="text-lg font-semibold"> {{ label }}</label>
+  <label for="name" class="text-lg font-semibold" > {{ label }}</label>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "@vue/runtime-core";
+
+export default defineComponent({
   name: "labelSmall",
   props: {
     label: {
@@ -12,8 +14,10 @@ export default {
     },
     name: {
       type: String,
-      required: true,
+      required: true, 
+
+      asda: "asd",
     }
   }
-}
+})
 </script>

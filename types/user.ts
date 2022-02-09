@@ -1,5 +1,5 @@
-type UserType = {
+type User = {
     name: string,
 }
 
-export default UserType;
+export default User;
