@@ -1,0 +1,15 @@
+query tasks {
+    tasks {
+        id,
+        name,
+        status
+    }
+}
+
+query task($id: ID!) {
+    task(id: $id) {
+        id,
+        name,
+        status
+    }
+}

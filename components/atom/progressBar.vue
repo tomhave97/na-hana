@@ -20,7 +20,6 @@ export default defineComponent({
       required: true
     },
     percentage: {
-      
       type: Number,
       required: true
     }

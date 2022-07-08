@@ -10,17 +10,18 @@
 import {useActiveTask} from "~/store/activeTask";
 import {useTask} from "~/store/tasks";
 import {computed, defineComponent} from "@vue/runtime-core";
+import {useTasksQuery} from "~/generated/operations";
 
 export default defineComponent({
   name: "tasks",
-  setup() {
+  async setup() {
     const taskStore = useTask();
     const activeTask = useActiveTask();
 
-    const tasks = computed(() => taskStore.unDone);
+    const { result, error } = await useTasksQuery()
 
     return {
-      tasks,
+      tasks: result,
       openTask: activeTask.set,
     };
   }
